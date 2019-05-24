@@ -1,7 +1,27 @@
-<h1>Our Cocktails</h1>
 
-<% @cocktails.each do |cocktail| %>
-  <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-<% end %>
+<div class="banner">
+    <h1>The Cocktail Guide</h1>
+</div>
 
-<%= link_to 'Add a Cocktail', new_cocktail_path, class: 'btn btn-primary rounded' %>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-img">
+
+        </div>
+        <div class="card-body">
+          <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+        </div>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+
+  <br>
+  <br>
+  <%= link_to 'Add a Cocktail', new_cocktail_path, class: 'btn btn-primary rounded' %>
+</div>
