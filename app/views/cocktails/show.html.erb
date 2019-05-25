@@ -1,15 +1,19 @@
 <h1><%= @cocktail['name'] %> <%= link_to 'Back', cocktails_path, class: "btn btn-sm btn-outline-primary rounded" %></h1>
 
 <div class="container">
-  <h5>Ingredients</h5>
+  <div class="ingredient">
+    <div class="col-md-4">
+      <h5>Ingredients</h5>
 
-  <% @cocktail.doses.each do |dose|  %>
-    <p><%= dose.ingredient.name %> <%= dose.description %> </p>
-  <% end %>
+      <% @cocktail.doses.each do |dose|  %>
+        <p><%= dose.ingredient.name %> <%= dose.description %> </p>
+      <% end %>
 
-  <br>
+      <br>
 
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-sm btn-outline-primary rounded" %>
+      <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-sm btn-outline-primary rounded" %>
+    </div>
+  </div>
 </div>
 
 

@@ -4,6 +4,8 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.label :name %>
   <%= f.input_field :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit "Add Cocktail", class: 'btn btn-outline-primary rounded btn-sm'%>
 <% end %>
 

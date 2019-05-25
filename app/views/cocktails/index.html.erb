@@ -1,3 +1,7 @@
+<div class="navbar">
+  <h5><i class="fas fa-cocktail"></i> The Cocktail Guide</h5>
+</div>
+
 
 <div class="banner">
     <h1>The Cocktail Guide</h1>
@@ -10,10 +14,11 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-img">
-
         </div>
         <div class="card-body">
-          <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+          <h5><%= cocktail.name %></h5>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+          <%= link_to 'More', cocktail_path(cocktail) %>
         </div>
       </div>
     </div>
