@@ -5,28 +5,30 @@
 
 <div class="banner">
     <h1>The Cocktail Guide</h1>
+    <p>become a bartender</p>
 </div>
 
-
 <div class="container">
+  <div class="list">
+    <h2>Cocktail List</h2>
+    <%= link_to 'Add a Cocktail', new_cocktail_path, class: 'list-btn' %>
+  </div>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-md-4">
       <div class="card">
-        <div class="card-img">
+        <div class="card-img" style="background-image: url(<%= cocktail.photo %>);">
         </div>
         <div class="card-body">
           <h5><%= cocktail.name %></h5>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-          <%= link_to 'More', cocktail_path(cocktail) %>
+          <div class="card-btn">
+            <a><%= link_to 'More', cocktail_path(cocktail) %></a>
+          </div>
         </div>
       </div>
     </div>
 
     <% end %>
   </div>
-
-  <br>
-  <br>
-  <%= link_to 'Add a Cocktail', new_cocktail_path, class: 'btn btn-primary rounded' %>
 </div>

@@ -20,6 +20,7 @@ body {
     vertical-align: middle;
     font-family: 'Crushed';
     letter-spacing: 2px;
+    margin-bottom: 0;
   }
 }
 
@@ -27,7 +28,20 @@ body {
   height: 100vh;
   background-image: linear-gradient(rgba(0 , 0, 0, 0.5), rgba(0 , 0, 0, 0.5)), url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80');
   background-size: cover;
+  h1 {
+    margin-bottom: 20px;
+  }
+  p {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: lighter;
+    vertical-align: middle;
+    font-family: 'Crushed';
+    letter-spacing: 3px;
+  }
 }
+
 h1 {
   color: #fff;
   text-align: center;
@@ -39,6 +53,38 @@ h1 {
   letter-spacing: 5px;
 }
 
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  h2 {
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: left;
+    color: #e18a1f;
+    font-size: 72px;
+    font-family: 'Crushed';
+    font-weight: lighter;
+    letter-spacing: 3px;
+  }
+}
+.list-btn {
+  border: 1px solid #e18a1f;
+  color: #e18a1f;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  &:hover {
+    background: #e18a1f;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+}
+
+
 .container {
   margin: 10px 100px;
   padding-bottom: 30px;
@@ -47,22 +93,40 @@ h1 {
 .card {
   margin-top: 20px;
   width: 100%;
-  background-color: linear-gradient(rgba(100 , 100, 100, 0.5), rgba(0 , 0, 0, 0.5));
+  background-color: rgba(100, 100, 100, 0.9);
   border: none;
+  border-radius: 4px;
   .card-img {
     height: 150px;
     background-color: #E5E7E9;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
   }
+}
+
+.card-body {
+  padding: 20px 30px;
   h5 {
     text-align: center;
     font-size: 14;
+    color: white;
   }
   p {
     text-align: center;
     font-size: 12;
     font-weight: lighter;
+    color: white;
   }
 }
+
+.card-btn {
+  text-align: right;
+  a {
+    font-size: 12;
+    color: white;
+  }
+}
+
 
 .ingredient {
   background-color: white;
