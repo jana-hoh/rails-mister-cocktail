@@ -6,12 +6,15 @@
       <h5>Ingredients</h5>
 
       <% @cocktail.doses.each do |dose|  %>
-        <p><%= dose.ingredient.name %> <%= dose.description %> </p>
+        <p><%= dose.ingredient.name %> <%= dose.description %>
+        <%= link_to 'delete', cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
       <% end %>
 
       <br>
 
       <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-sm btn-outline-primary rounded" %>
+
+      <%= link_to 'Delete cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-primary rounded" %>
     </div>
   </div>
 </div>
