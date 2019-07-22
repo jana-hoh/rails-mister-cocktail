@@ -1,5 +1,4 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail
 
   def new
     @dose = Dose.new()
